@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+
+
+<div class="login-page">
+    <div class="form">
+      <h2>Nuevo producto</h2>
+      
+      <form class="login-form" [formGroup]="form" (ngSubmit)="submit()" > <!--  -->
+        <input type="text" placeholder="Nombre"  formControlName="nombre"/>
+        <input type="number" placeholder="Precio" formControlName="precio"/>
+        <input type="number" placeholder="Cantidad" formControlName="cantidad"/>
+        <!--<input (change)="getFile($event)"  type="file" placeholder="Foto" formControlName="foto"/> 
+        
+        Visualizar imagen
+        <img *ngIf="previsualizacion" [src]="previsualizacion" width="150px" height="150px"> -->
+        
+        <button mat-raised-button>Registrar</button>
+      </form>
+    </div>
+  </div>
+  
+    <div class="register">
+        <p>¿Deseas ir al menu de productos?</p>
+        <button (click)="irMenu()">Click aquí</button>
+    
+    </div>
+  

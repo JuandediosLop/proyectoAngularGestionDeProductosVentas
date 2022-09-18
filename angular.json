@@ -70,6 +70,12 @@
               "browserTarget": "proyectoAngular:build:development"
             }
           },
+          "options": {
+            "browserTarget": "app:build",
+            "ssl": true,
+            "sslKey": "./localhost.key",
+            "sslCert": "./localhost.crt"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -92,7 +98,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           }
         }
       }

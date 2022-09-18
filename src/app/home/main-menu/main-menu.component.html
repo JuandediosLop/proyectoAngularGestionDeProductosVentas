@@ -1,0 +1,21 @@
+
+<!--Llamar al nav-->
+<app-nav-bar></app-nav-bar>
+<div class="main">
+    <h2>Bienvenido {{user[0].login_name}}</h2>
+
+    <div class="color">
+      <h2>Opciones de perfil</h2>
+      <div class="opciones">
+        <div class="login">
+          <button (click)="consultar()" >Consultar Perfil</button>
+        </div>
+        <div class="register">
+          <button (click)="modificar()" >Modificar Perfil</button>
+        </div>
+        <div class="cerrarSesion">
+          <button (click)="cerrarSesion()" >Cerrar Sesión</button>
+        </div>
+      </div>  
+    </div>
+  </div>

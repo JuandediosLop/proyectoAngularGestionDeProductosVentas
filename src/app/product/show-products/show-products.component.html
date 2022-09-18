@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+
+<h3 class="titulo">Productos</h3>
+<div class="productos">
+  <div *ngFor="let producto of productos" class="producto">
+    <p class="nombre">
+       {{productos[productos.indexOf(producto)].nombre}}
+    </p>
+    <p class="precio"> 
+      Precio: <span>{{productos[productos.indexOf(producto)].precio}}.00</span>
+    </p>
+    <p class="stock">
+      Stock: <span>{{productos[productos.indexOf(producto)].cantidad}}</span> 
+    </p>
+    <p class="fecha">
+      Fecha creación <span>{{productos[productos.indexOf(producto)].fechaCorta}}</span>
+    </p>
+
+    <p class="estado" *ngIf="productos[productos.indexOf(producto)].estado < 1">
+      Estado: <span>Inactivo</span>
+    </p>
+    <p class="estado" *ngIf="productos[productos.indexOf(producto)].estado > 0">
+      Estado: <span>Activo</span>
+    </p>
+  </div>
+</div>

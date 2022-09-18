@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+<div class="login-page">
+    <div class="form">
+      <h2>Modificando perfil de {{user[0].login_name}} </h2>
+      <form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
+        <label>Username</label>
+        <input type="text" placeholder="Usuario"  formControlName="username"/>
+        <label>Contraseña</label>
+        <input type="password" placeholder="Contraseña" formControlName="pass"/>
+        <label>Nombre</label>
+        <input type="text" placeholder="Nombre" formControlName="nombre"/>
+        <label>Apellido</label>
+        <input type="text" placeholder="Apellido" formControlName="apellido"/>
+        <input (change)="getFile($event)" type="file" placeholder="Foto" formControlName="foto"/>
+        <button mat-raised-button>Guardar cambios</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="main">
+    <h2>¿Deseas realizar otra opción?</h2>
+    <div class="opciones">
+      <div class="login">
+        <button (click)="irMenu()">Menu Principal</button>
+      
+      </div>
+      <div class="register">
+        <button (click)="cerrarSesion()">Cerrar sesión</button>
+      </div>
+    </div>

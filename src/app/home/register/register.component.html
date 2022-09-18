@@ -1,0 +1,28 @@
+<div class="navbar">
+    <img class="imagenLogo" src="../../assets/Logo.png" alt="">
+</div>
+<div class="login-page">
+    <div class="form">
+      <h2>Registrar nuevo Usuario</h2>
+      
+      <form class="login-form" [formGroup]="form" (ngSubmit)="submit()" > 
+        <input type="text" placeholder="Usuario"  formControlName="username"/>
+        <input type="password" placeholder="Contraseña" formControlName="pass"/>
+        <input type="text" placeholder="Nombre" formControlName="nombre"/>
+        <input type="text" placeholder="Apellido" formControlName="apellido"/>
+        <input (change)="getFile($event)"  type="file" placeholder="Foto" formControlName="foto"/> 
+        
+        <!--Visualizar imagen-->
+        <img *ngIf="previsualizacion" [src]="previsualizacion" width="150px" height="150px"> 
+        
+        <button mat-raised-button>Registrar</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="register">
+      <p>¿Deseas Iniciar Sesión?</p>
+      <button (click)="irLogin()">Click aquí</button> 
+    
+    </div>
+  

@@ -1,0 +1,40 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="form parametros">
+  <h2>Parametros </h2>
+  <form class="login-form flex" [formGroup]="parametros" (ngSubmit)="traerProducto()">
+    <input type="number" placeholder="Id Producto" formControlName="id">
+    <!-- <input id="nombre" type="text" placeholder="Nombre Producto" name="nombre" formControlName="nombre"> -->
+    <button>Buscar</button>
+  </form>
+</div>
+
+<div class="login-page">
+    <div class="form">
+      <h2>Modificar productos</h2>
+      
+      <form class="login-form" [formGroup]="form"(ngSubmit)="submit()"  > <!--   -->
+        <label for="">Nombre</label>
+        <input type="text" placeholder="Nombre"  formControlName="nombre"/>
+        <label for="">Precio</label>
+        <input type="number" placeholder="Precio" formControlName="precio"/>
+        <label for="">Cantidad</label>
+        <input type="number" placeholder="Cantidad" formControlName="cantidad"/>
+        <label for="">Estado</label>
+        <input type="text" placeholder="Estado" formControlName="estado">
+        <!--<input (change)="getFile($event)"  type="file" placeholder="Foto" formControlName="foto"/> 
+        
+        Visualizar imagen
+        <img *ngIf="previsualizacion" [src]="previsualizacion" width="150px" height="150px"> -->
+        
+        <button mat-raised-button>Registrar</button>
+      </form>
+    </div>
+  </div>
+  
+    <div class="register">
+        <p>¿Deseas ir al menu de productos?</p>
+        <button >Click aquí</button> <!--(click)="irMenu()"-->
+    
+    </div>
+  
